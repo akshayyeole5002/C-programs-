@@ -1,0 +1,177 @@
+
+
+
+
+// Examples 1: Calculator
+
+/*
+
+#include <stdio.h>
+
+int main() {
+    char operator;
+    double num1, num2, result;
+
+    // Input
+    printf("Enter an operator (+, *, /): ");
+    scanf(" %c", &operator); // Note the space before %c to consume any newline character
+
+    printf("Enter two numbers: ");
+    scanf("%lf %lf", &num1, &num2);
+
+    // Calculation
+    if (operator == '+') {
+        result = num1 + num2;
+    } else if (operator == '*') {
+        result = num1 * num2;
+    } else if (operator == '/') {
+        if (num2 != 0) {
+            result = num1 / num2;
+        } else {
+            printf("Error: Division by zero\n");
+            return 1; // Exit with an error code
+        }
+    } else {
+        printf("Error: Invalid operator\n");
+        return 1; // Exit with an error code
+    }
+
+    // Output
+    printf("Result: %.2lf\n", result);
+
+    return 0; // Exit successfully
+}
+
+*/
+
+// Examples 2: Roots of quadratic equations 
+
+
+/*
+
+#include <stdio.h>
+#include <math.h>
+
+int main() {
+    double a, b, c, discriminant, root1, root2;
+
+    // Input coefficients
+    printf("Enter coefficients (a, b, c): ");
+    scanf("%lf %lf %lf", &a, &b, &c);
+
+    // Calculate discriminant
+    discriminant = b * b - 4 * a * c;
+
+    // Check for real roots
+    if (discriminant >= 0) {
+        // Calculate roots
+        root1 = (-b + sqrt(discriminant)) / (2 * a);
+        root2 = (-b - sqrt(discriminant)) / (2 * a);
+
+        printf("Roots are: %.2lf and %.2lf\n", root1, root2);
+    } else {
+        printf("No real roots exist.\n");
+    }
+
+    return 0;
+}
+
+
+*/
+
+
+// Example 3: 
+
+/*
+#include <stdio.h>
+
+int main() {
+    double side1, side2, side3;
+
+    // Input sides
+    printf("Enter the lengths of three sides of the triangle: ");
+    scanf("%lf %lf %lf", &side1, &side2, &side3);
+
+    // Check for equilateral
+    if (side1 == side2 && side2 == side3) {
+        printf("Equilateral Triangle\n");
+    }
+    // Check for right-angled (using Pythagorean theorem)
+    else if (side1*side1 + side2*side2 == side3*side3 || side1*side1 + side3*side3 == side2*side2 || side2*side2 + side3*side3 == side1*side1) {
+        printf("Right-Angled Triangle\n");
+    }
+    // Otherwise, it's scalene
+    else {
+        printf("Scalene Triangle\n");
+    }
+
+    return 0;
+}
+
+*/
+
+// Example 4: Average of numbers
+
+/*
+
+#include <stdio.h>
+
+int main() {
+    int n, i;
+    double sum = 0.0;
+
+    // Input the number of elements
+    printf("Enter the number of elements: ");
+    scanf("%d", &n);
+
+    // Input the elements and calculate the sum
+    printf("Enter %d numbers:\n", n);
+    for (i = 0; i < n; ++i) {
+        double num;
+        scanf("%lf", &num);
+        sum += num;
+    }
+
+    // Calculate and display the average
+    if (n > 0) {
+        double average = sum / n;
+        printf("Average: %.2lf\n", average);
+    } else {
+        printf("Cannot calculate average for 0 elements.\n");
+    }
+
+    return 0;
+}
+
+*/
+
+
+// Examples 5:  Pyramid 
+
+/*
+
+#include <stdio.h>
+int main()
+{
+    int rows = 5;
+     
+    for( int i = 1; i <= rows;i++ ){
+        // Print spaces
+        for(int j = 1; j <= rows - i; j++){
+          printf(" ");      
+        }
+        // Print increase number 
+        for (int k = 1; k <= i; k++){
+            printf("%d", k);
+        }
+        // Print decreasing number
+        for (int l = i - 1; l >= 1; l--){
+            printf("%d",l);
+        }
+        printf("\n");
+    }
+    
+    return 0;
+}
+
+*/
