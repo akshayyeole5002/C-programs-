@@ -14,7 +14,7 @@ int main() {
 
     // Input
     printf("Enter an operator (+, *, /): ");
-    scanf(" %c", &operator); // Note the space before %c to consume any newline character
+    scanf(" %c", &operator); 
 
     printf("Enter two numbers: ");
     scanf("%lf %lf", &num1, &num2);
@@ -29,11 +29,11 @@ int main() {
             result = num1 / num2;
         } else {
             printf("Error: Division by zero\n");
-            return 1; // Exit with an error code
+            
         }
     } else {
         printf("Error: Invalid operator\n");
-        return 1; // Exit with an error code
+        
     }
 
     // Output
@@ -41,7 +41,6 @@ int main() {
 
     return 0; // Exit successfully
 }
-
 */
 
 // Examples 2: Roots of quadratic equations 
